@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.cache/
+
+# Canonical model artifacts are published on Hugging Face, not in Git history.
+adapter_model.safetensors
+tokenizer.json
+tokenizer_config.json
+training_args.bin
+*.safetensors
+checkpoints/
+models/

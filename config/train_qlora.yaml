@@ -1,0 +1,36 @@
+model_id: Qwen/Qwen3-14B-Base
+model_revision: 0b0bd3732e2c374d483664439ea334928b65f304
+train_file: data/processed/train.jsonl
+validation_file: data/processed/validation.jsonl
+output_dir: checkpoints/qwen3-14b-reflex-qlora
+seed: 20260822
+max_length: 2048
+num_train_epochs: 1.0
+max_steps: -1
+learning_rate: 0.0002
+warmup_ratio: 0.03
+weight_decay: 0.0
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
+gradient_accumulation_steps: 8
+logging_steps: 5
+eval_steps: 50
+save_steps: 50
+save_total_limit: 4
+gradient_checkpointing: true
+bf16: true
+tf32: true
+optim: paged_adamw_8bit
+lr_scheduler_type: cosine
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+

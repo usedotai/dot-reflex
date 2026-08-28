@@ -1,0 +1,100 @@
+{
+  "benchmark_scope": {
+    "agentic_swe": true,
+    "fully_synthetic": true,
+    "production_validation": false,
+    "stateful_episodes": 200,
+    "static_trajectories": 1000,
+    "swe_bench": false
+  },
+  "branding_assets": {
+    "dot": {
+      "path": "assets/branding/dot-mark.png",
+      "sha256": "d8b632da85953ed75b11f9e77d998ad01e89e042a14abd8f3990fc5fc2442b68",
+      "transparent_background": true
+    },
+    "qwen": {
+      "path": "assets/branding/qwen-logo.png",
+      "sha256": "a98b91d365fba5f08370d8d8755aa60692be0e6c64124cc33bb282c9fb2432cb",
+      "source": "https://qwenlm.github.io/favicon.png",
+      "transparent_background": true
+    }
+  },
+  "controller_order": [
+    "adapter",
+    "prompt_only",
+    "base",
+    "heuristic"
+  ],
+  "outputs": {
+    "dot_reflex_social_card.png": {
+      "bytes": 345342,
+      "sha256": "8e5b1234b50b9ad7ea25779e8ca54b19b35258fe89de7573372285fe19df0f22"
+    },
+    "dot_reflex_social_card.svg": {
+      "bytes": 216409,
+      "sha256": "3e261504a3332e313c62ba4409a5457c2bdcd04b023052ac566e12172cef476b"
+    }
+  },
+  "panel_values": {
+    "Calibration Error \u00b7 ECE": {
+      "adapter": 7.021500000000006,
+      "base": 67.10000000000001,
+      "heuristic": 13.8,
+      "prompt_only": 5.33
+    },
+    "False Completion Detection": {
+      "adapter": 100.0,
+      "base": 100.0,
+      "heuristic": 100.0,
+      "prompt_only": 100.0
+    },
+    "Loop Interruption": {
+      "adapter": 100.0,
+      "base": 100.0,
+      "heuristic": 100.0,
+      "prompt_only": 100.0
+    },
+    "Macro F1 \u00b7 10 Controls": {
+      "adapter": 100.0,
+      "base": 60.79325606478088,
+      "heuristic": 73.33333333333333,
+      "prompt_only": 86.66666666666667
+    },
+    "Recovery Action Accuracy": {
+      "adapter": 100.0,
+      "base": 67.10000000000001,
+      "heuristic": 80.0,
+      "prompt_only": 90.0
+    },
+    "Stateful Recovery": {
+      "adapter": 100.0,
+      "base": 78.5,
+      "heuristic": 80.0,
+      "prompt_only": 100.0
+    }
+  },
+  "source_files": [
+    "artifacts/raw/adapter_metrics.json",
+    "artifacts/raw/prompt_only_metrics.json",
+    "artifacts/raw/base_metrics.json",
+    "artifacts/raw/heuristic_metrics.json",
+    "checkpoints/qwen3-14b-reflex-qlora/run_receipt.json"
+  ],
+  "title": "Dot Reflex 14B Agentic SWE Model Evaluation",
+  "training_provenance": {
+    "accelerator": "NVIDIA H200",
+    "base_model": "Qwen/Qwen3-14B-Base",
+    "base_revision": "0b0bd3732e2c374d483664439ea334928b65f304",
+    "elapsed_seconds": 1817.669701117,
+    "final_validation_loss": 0.0864013135433197,
+    "lora_alpha": 128,
+    "lora_rank": 64,
+    "method": "rank-64 QLoRA",
+    "optimizer": "paged_adamw_8bit",
+    "optimizer_steps": 375,
+    "precision": "bf16",
+    "total_parameters": 15025208320,
+    "trainable_parameters": 256901120
+  }
+}

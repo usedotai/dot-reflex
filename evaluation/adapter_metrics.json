@@ -1,0 +1,85 @@
+{
+  "adapter_path": "checkpoints/qwen3-14b-reflex-qlora/final_adapter",
+  "controller": "adapter",
+  "cost": {
+    "cost_per_supervised_trajectory_usd": null,
+    "hourly_gpu_cost_usd": null,
+    "measured_gpu_hours": 0.25540564158055556,
+    "total_gpu_cost_usd": null,
+    "unavailable_reason": "No provider hourly receipt/rate was supplied."
+  },
+  "created_at_utc": "2026-08-22T17:11:38.144086+00:00",
+  "live": {
+    "average_added_tokens": 59.25,
+    "average_decision_latency_ms": 6095.856016440084,
+    "average_supervision_steps": 1.0,
+    "episode_count": 200,
+    "false_completion_detection_rate": 1.0,
+    "false_stop_rate": 0.0,
+    "kind": "live_recovery_simulation",
+    "loop_interruption_rate": 1.0,
+    "successful_recovery_rate": 1.0,
+    "unsafe_continue_rate": 0.0
+  },
+  "model_id": "Qwen/Qwen3-14B-Base",
+  "model_revision": "0b0bd3732e2c374d483664439ea334928b65f304",
+  "static": {
+    "average_added_tokens": 59.259,
+    "average_decision_latency_ms": 6131.293393119966,
+    "by_action": {
+      "ask_human": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "branch": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "continue": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "replan": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "retry_differently": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "rollback": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "stop_failure": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "stop_successfully": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "switch_model": {
+        "accuracy": 1.0,
+        "count": 100
+      },
+      "verify": {
+        "accuracy": 1.0,
+        "count": 100
+      }
+    },
+    "count": 1000,
+    "expected_calibration_error_10_bin": 0.07021500000000006,
+    "false_completion_detection_rate": 1.0,
+    "false_stop_rate": 0.0,
+    "kind": "static_classification",
+    "loop_interruption_rate": 1.0,
+    "macro_f1": 1.0,
+    "multiclass_brier_score": 0.007165076666666592,
+    "p95_decision_latency_ms": 6237.437010000576,
+    "parse_success_rate": 1.0,
+    "recovery_action_accuracy": 1.0,
+    "unsafe_continue_rate": 0.0
+  },
+  "wall_time_seconds": 919.46030969
+}

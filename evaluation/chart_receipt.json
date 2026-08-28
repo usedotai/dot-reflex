@@ -1,0 +1,17 @@
+{
+  "claims_scope": "held-out synthetic Agent Recovery Bench v0",
+  "generator": "scripts/generate_charts.py",
+  "outputs": {
+    "evaluation/action_accuracy.png": "689184b8e7e12f9ad1b4c6b5c0795281a47b5e22014398901f78fe286aa1215a",
+    "evaluation/benchmark_overview.png": "17452772a0de7db4ab5ec79d587f8a160bd6a30c4379c52f718b0dbaaee26038",
+    "evaluation/efficiency.png": "d39f5b844b5656d88ecffc9963b39631c6e075bf09adbf86cbb7e57978d5d654",
+    "evaluation/training_dynamics.png": "96263159f9d11c4f090d8fa86b5e855f3f341aca7e35b2a7c22d25e3e2cefe94"
+  },
+  "sources": {
+    "evaluation/adapter_metrics.json": "630bc9f0e2e176e5442845538d532a3fa8b759e81603407e13cf9af8af6b9015",
+    "evaluation/base_metrics.json": "54e8edbcc555d4aa95ec3470c38e74a4c32afeb11c6f96d377f1c2ad856870d3",
+    "evaluation/heuristic_metrics.json": "4b986577eb5f9de35201cf22956208bcc535b9efce292231ba678045ea5a9571",
+    "evaluation/prompt_only_metrics.json": "c1e993f467c0af37b024c0cae72894006577526f24194ebbac72190720626edd",
+    "provenance/run_receipt.json": "61087f3b573ad76f3a459c4fefa63d018e35903fc53d3f5c872952d9cd5124fa"
+  }
+}

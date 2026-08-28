@@ -1,0 +1,24 @@
+name: Source validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Contract tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate example input
+        run: python inference.py examples/trajectory_false_completion.json --validate-only
+      - name: Validate source release
+        run: python scripts/validate_release.py

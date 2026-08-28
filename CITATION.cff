@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: "Dot Reflex 14B: An Agent Execution Recovery Controller"
+message: "If you use this adapter, please cite this release."
+type: software
+authors:
+  - name: "Dot R&D"
+version: 1.0.0
+date-released: 2026-08-27
+license: Apache-2.0
+repository-code: "https://github.com/usedotai/dot-reflex"
+url: "https://huggingface.co/usedot/Dot-Reflex-14B"
+abstract: >-
+  A rank-64 QLoRA adapter for Qwen3-14B-Base that maps structured agent
+  execution trajectories to ten recovery-control actions.

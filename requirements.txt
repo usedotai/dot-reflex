@@ -1,0 +1,6 @@
+torch>=2.7,<3
+transformers>=4.51,<6
+peft>=0.15,<1
+accelerate>=1.6,<2
+bitsandbytes>=0.46,<1
+safetensors>=0.5,<1

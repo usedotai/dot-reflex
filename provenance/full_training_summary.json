@@ -1,0 +1,43 @@
+{
+  "first_timestamp": "2026/08/22 16:24:26.979",
+  "last_timestamp": "2026/08/22 16:55:01.300",
+  "sample_count": 918,
+  "source": "artifacts/gpu/full_training_utilization.csv",
+  "statistics": {
+    "index": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0
+    },
+    "memory.total [MiB]": {
+      "max": 143771.0,
+      "mean": 143771.0,
+      "min": 143771.0
+    },
+    "memory.used [MiB]": {
+      "max": 22065.0,
+      "mean": 21934.462962962964,
+      "min": 0.0
+    },
+    "power.draw [W]": {
+      "max": 652.3,
+      "mean": 512.5136383442264,
+      "min": 122.02
+    },
+    "temperature.gpu": {
+      "max": 69.0,
+      "mean": 60.82788671023965,
+      "min": 38.0
+    },
+    "utilization.gpu [%]": {
+      "max": 100.0,
+      "mean": 76.01525054466231,
+      "min": 0.0
+    },
+    "utilization.memory [%]": {
+      "max": 47.0,
+      "mean": 35.3235294117647,
+      "min": 0.0
+    }
+  }
+}

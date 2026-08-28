@@ -1,0 +1,13 @@
+seed: 20260822
+benchmark_file: data/processed/benchmark.jsonl
+live_episodes_file: data/processed/live_episodes.jsonl
+max_new_tokens: 160
+temperature: 0.0
+top_p: 1.0
+hourly_gpu_cost_usd: null
+controllers:
+  - heuristic
+  - base
+  - prompt_only
+  - adapter
+

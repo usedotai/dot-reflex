@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://huggingface.co/usedot/Dot-Reflex-14B/raw/main/trajectory.schema.json",
+  "title": "Dot Reflex trajectory",
+  "description": "A compact evidence snapshot passed to the Dot Reflex recovery controller.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_summary",
+    "execution_history",
+    "tool_results",
+    "current_state",
+    "detected_failure_signals"
+  ],
+  "properties": {
+    "task_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "execution_history": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["step", "actor", "action", "result"],
+        "properties": {
+          "step": {"type": "integer", "minimum": 0},
+          "actor": {"type": "string", "minLength": 1, "maxLength": 200},
+          "action": {"type": "string", "minLength": 1, "maxLength": 4000},
+          "result": {"type": "string", "maxLength": 8000}
+        }
+      }
+    },
+    "tool_results": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["tool", "status", "summary"],
+        "properties": {
+          "tool": {"type": "string", "minLength": 1, "maxLength": 300},
+          "status": {"type": "string", "minLength": 1, "maxLength": 100},
+          "summary": {"type": "string", "maxLength": 8000}
+        }
+      }
+    },
+    "current_state": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8000
+    },
+    "detected_failure_signals": {
+      "type": "array",
+      "maxItems": 50,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1, "maxLength": 200}
+    }
+  }
+}
+
