@@ -1,0 +1,25 @@
+{
+  "task_summary": "Append one synthetic status comment to ticket DEMO-42. Do not create a duplicate comment.",
+  "execution_history": [
+    {
+      "step": 1,
+      "actor": "worker",
+      "action": "Called append_comment for DEMO-42 with body Status checked.",
+      "result": "The request timed out before the caller received a response. No destination read has been performed.",
+      "operation_id": "demo-comment-1"
+    }
+  ],
+  "tool_results": [
+    {
+      "tool": "append_comment",
+      "status": "timeout",
+      "summary": "No acknowledgment was received. The tool response does not establish whether the comment was committed.",
+      "operation_id": "demo-comment-1"
+    }
+  ],
+  "current_state": "The ticket comment state is unknown. A read_ticket tool is available, but its freshness and completeness have not yet been checked. No second append_comment call has been made.",
+  "detected_failure_signals": [
+    "provider_timeout",
+    "missing_verification"
+  ]
+}
