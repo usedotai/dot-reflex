@@ -81,6 +81,19 @@ Failure-signal strings are open vocabulary. Useful examples include
 should summarize deterministic evidence; they must not encode the desired
 answer.
 
+## Example: a write with no acknowledgment
+
+`examples/trajectory_lost_ack.json` is a synthetic ticket-comment input snapshot.
+The caller saw a timeout and has not observed destination state. The snapshot
+therefore records an unknown outcome, not a failed write or a successful one.
+It contains no gold action or hidden commit label. Optional operation IDs keep
+related observations linked without changing the root contract.
+
+A wrapper still needs its own deterministic effect policy. A later empty read
+is not proof of non-execution unless the destination contract makes it terminal;
+a slow request might still commit. This example validates input shape only. It
+does not run the neural controller or measure recovery success.
+
 ## Framework compatibility
 
 | Harness | Practical fit | Adapter work required |
